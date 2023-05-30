@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Tienda de Ropa</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <h1>Tienda de Ropa</h1>
+  </header>
+  <br>
+
+  <div class="navigation">
+    <ul>
+      <li class="list active">
+        <a href="">
+          <span class="icon">
+            <ion-icon name="home-outline"></ion-icon>
+          </span>
+          <span class="text">Home</span>
+        </a>
+      </li>
+      <li class="list" onclick="iraropa()">
+        <a href="#">
+          <span class="icon">
+            <ion-icon name="body-outline"></ion-icon>
+          </span>
+          <span class="text">ropa</span>
+        </a>
+      </li>
+      <li class="list">
+        <a href="#" onclick="irAtenis()">
+          <span class="icon">
+            <ion-icon name="footsteps-outline"></ion-icon>
+          </span>
+          <span class="text">zapatos</span>
+        </a>
+      </li>
+      <li class="list">
+        <a href="#">
+          <span class="icon"onclick="irAFormulario()">
+            <ion-icon name="person-add-outline"></ion-icon>
+          </span>
+          <span class="text">contacto</span>
+        </a>
+      </li>
+      <li class="list">
+        <a href="#" onclick="irmap()">
+          <span class="icon">
+            <ion-icon name="location-outline"></ion-icon>
+          </span>
+          <span class="text">ubicacion</span>
+        </a>
+      </li>
+      <div class="indicador"></div>
+    </ul>
+
+
+  </div>
+
+  <main>
+    <h2>¡Bienvenido a nuestra tienda de ropa!</h2>
+
+    
+
+    <h3>Promociones especiales:</h3>
+    <p>¡Descuento del 20% en todas las camisetas!</p>
+    <br><br><br>
+    <div class="card" id="1">
+      <div class="circle"> </div>
+      <div class="content">
+        <h2>hoodie</h2>
+        <p>Lorem ipsum dolor sit ametame kannake </p>
+        <a href="#">buy now</a>
+      </div>
+
+      <img src="img/1974903_STON_1-PhotoRoom.png-PhotoRoom.png" alt="Imagen 1">
+
+    </div>
+    <div class="card">
+      <div class="circle"></div>
+      <div class="content">
+        <h2>hoodie</h2>
+        <p>Lorem ipsum dolor sit ametame kannake </p>
+        <a href="#">buy now</a>
+      </div>
+
+      <img src="img/3_31449ee7-9810-4aba-bc08-1d74b89de3c5_1080x1350-PhotoRoom.png-PhotoRoom.png" alt="Imagen 2">
+
+
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="card">
+      <div class="circle"></div>
+      <div class="content">
+        <h2>hoodie</h2>
+        <p>Lorem ipsum dolor sit ametame kannake </p>
+        <a href="#">buy now</a>
+      </div>
+
+      <img src="img/GOLFCREWNECKBEIGEback_1080x1350.jpg-PhotoRoom.png-PhotoRoom.png" alt="Imagen 2">
+
+
+    </div>
+    <div class="card">
+      <div class="circle"></div>
+      <div class="content">
+        <h2>hoodie</h2>
+        <p>Lorem ipsum dolor sit ametame kannake </p>
+        <a href="#">buy now</a>
+      </div>
+
+      <img src="img/NOTHING2LOSEHOODIECINAMONbak_1080x1350.jpg-PhotoRoom.png-PhotoRoom.png" alt="Imagen 2">
+
+
+    </div>
+    
+    <section class="tenis" id="23">
+      <div class="contenedor">
+        <div class="tarjeta">
+          <div class="imgBx">
+            <img src="img/1_33.png-PhotoRoom.png-PhotoRoom.png">
+            <h2>nike</h2>
+          </div>
+          <div class="contenido">
+            <div class="talla">
+              <h3>talla</h3>
+              <span>7</span>
+              <span>8</span>
+              <span>9</span>
+              <span>10</span>
+
+            </div>
+            <a href="#">Buy Now</a>
+          </div>
+        </div>
+        <div class="tarjeta">
+          <div class="imgBx">
+            <img src="img/1_1.png-PhotoRoom.png-PhotoRoom.png">
+            <h2>nike</h2>
+          </div>
+          <div class="contenido">
+            <div class="talla">
+              <h3>talla</h3>
+              <span>7</span>
+              <span>8</span>
+              <span>9</span>
+              <span>10</span>
+
+            </div>
+            <a href="#">Buy Now</a>
+          </div>
+        </div>
+        <div class="tarjeta">
+          <div class="imgBx">
+            <img src="img/1_17.png-PhotoRoom.png-PhotoRoom.png">
+            <h2>nike</h2>
+          </div>
+          <div class="contenido">
+            <div class="talla">
+              <h3>talla</h3>
+              <span>7</span>
+              <span>8</span>
+              <span>9</span>
+              <span>10</span>
+
+            </div>
+            <a href="#">Buy Now</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="formulario-registro" id="formulario">
+      <h4>Formulario Registro</h4>
+      <input class="controls" type="text" name="nombres" id="nombres" placeholder="Ingrese su nombre" >
+      <input class="controls" type="text" name="apellidos" id="apellidos" placeholder="Ingrese sus apellidos" >
+      <input class="controls" type="email" name="correo" id="correo" placeholder="Ingrese su correo" >
+      
+      
+  
+   <br>
+   <br>
+
+   <label class= " checkbox-container " >
+      <a >Estoy de acuerdo con los</a> <a class="control11" href="#" >Terminos y Condiciones</a><input type="checkbox" name="" id=""/>
+      <span class="checkmark">
+          <span class="material-icons">check</span>
+      </span>
+  </label>
+   
+   <input class="botons"type="submit" value="Registrar">
+   
+   <p><a class="control11" href="#" >¿Ya tengo cuenta?</a></p>
+   
+</section>
+
+
+    
+  </main>
+  <br><br>
+  <div id="map"></div>
+
+  <br><br>
+
+  <script async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD-k5RFANmGXTRkv9cznVn_0Lbj67xNVcU&callback=iniciar"></script>
+  <script>
+    const mapDiv = document.getElementById("map");
+    let map;
+
+    function iniciar() {
+      map = new google.maps.Map(mapDiv, {
+        center: { lat: 40.4165000, lng: -3.7025600 },
+        zoom: 14
+      });
+      const marker = new google.maps.Marker({
+        position: { lat: 40.423732, lng: -3.700568 },
+        map: map,
+        title: "Marcador"
+      });
+    }
+  </script>
+
+  <script>
+    const list = document.querySelectorAll('.list');
+    function activelink() {
+      list.forEach((item) =>
+        item.classList.remove('active'));
+      this.classList.add('active');
+
+    }
+    list.forEach((item) =>
+      item.addEventListener('click', activelink));
+  </script>
+  <script>
+    function irAtenis() {
+   
+      const formularioPosicion = document.getElementById('23').offsetTop;
+  
+     
+      window.scrollTo({
+        top: formularioPosicion,
+        behavior: 'smooth' 
+      });
+    }
+    function irAFormulario() {
+   
+   const formularioPosicion = document.getElementById('formulario').offsetTop;
+
+  
+   window.scrollTo({
+     top: formularioPosicion,
+     behavior: 'smooth' 
+   });
+ }
+ function iraropa () {
+   
+   const formularioPosicion = document.getElementById('1').offsetTop;
+
+  
+   window.scrollTo({
+     top: formularioPosicion,
+     behavior: 'smooth' 
+   });
+ }
+ function irmap() {
+   
+   const formularioPosicion = document.getElementById('map').offsetTop;
+
+  
+   window.scrollTo({
+     top: formularioPosicion,
+     behavior: 'smooth' 
+   });
+ }
+  </script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

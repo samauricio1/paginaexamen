@@ -1,0 +1,605 @@
+
+
+
+
+body {
+
+
+
+
+
+box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  flex-direction: column;
+   text-align: center;
+}
+header {
+ 
+  color:black;
+  padding: 20px;
+  text-align: center;
+}
+h1 {
+  margin: 0;
+}
+main {
+  margin: 20px;
+}
+.navigation{
+  width: 400px;
+  height: 70px;
+  background-color: #fff;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+
+}
+.navigation ul { 
+display: flex;
+width: 350px;
+
+}
+.navigation ul li{
+position: relative;
+list-style: none;
+width: 70px;
+height: 70px;
+z-index: 1;
+
+
+
+}
+.navigation ul li a{
+
+position: relative;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+width: 100%;
+text-align: center;
+font-weight: 500;
+}
+.navigation ul li a .icon
+{ 
+position: relative;
+display: block;
+line-height: 75px;
+font-size: 1.5em;
+text-align: center;
+transition: 0.5s;
+color: black;
+}
+.navigation ul li.active a .icon{
+transform: translateY(-32px);
+}
+.navigation ul li a .text{
+position: absolute;
+color: black;
+font-weight: 400;
+font-size: 0.75em;
+letter-spacing: 0.05em;
+transition: 0.5s;
+opacity: 0;
+transform: translateY(20px);
+
+}
+.navigation ul li.active a .text{
+
+opacity: 1;
+transform: translateY(10px);
+}
+.indicador{
+  position: absolute;
+  top: -50%;
+  width: 70px;
+  height: 70px;
+  background-color: greenyellow;
+  border-radius: 50%;
+  border: 6px solid color black;
+  transition: 0.5s;
+}
+.indicador::before{
+content: '';
+position: absolute;
+top: 50%;
+left: -22px;
+width: 20px;
+height: 20px;
+background :transparent ;
+border-top-right-radius: 20px;
+box-shadow: 0px -10px 0 0 color black;
+}
+.indicador::after{
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -22px;
+  width: 20px;
+  height: 20px;
+  background :transparent ;
+  border-top-left-radius: 20px;
+  box-shadow: 0px -10px 0 0 color black;
+  }
+  .navigation ul li:nth-child(1).active ~ .indicador{
+transform: translateX(calc(70px * 0));
+
+
+  }
+  .navigation ul li:nth-child(2).active ~ .indicador{
+    transform: translateX(calc(70px * 1));
+    
+    
+      }
+      .navigation ul li:nth-child(3).active ~ .indicador{
+        transform: translateX(calc(70px * 2));
+        
+        
+          }
+          .navigation ul li:nth-child(4).active ~ .indicador{
+            transform: translateX(calc(70px * 3));
+            
+            
+              }
+              .navigation ul li:nth-child(5).active ~ .indicador{
+                transform: translateX(calc(70px * 4));
+                
+                
+                  }
+#map{
+  height: 500px;
+  width: 70%;
+
+}
+
+
+.tenis{
+display: flex;
+justify-content: center;
+align-items: center;
+min-height: 100vh;
+overflow: hidden;
+padding: 100px 20px;
+box-sizing: border-box;
+
+}
+.tenis::before{
+content: '';
+position: fixed;
+top:0;
+left: 0;
+width: 100%;
+height: 100%;
+
+clip-path: circle(65% at 100% -20%);
+
+}
+.tenis::after{
+  content: '';
+  position: fixed;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  
+  clip-path: circle(35% at 0% 100%);
+  
+  }
+.contenedor{
+position: relative;
+z-index: 10;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-wrap: wrap;
+}
+.contenedor .tarjeta
+
+{
+position: relative;
+width: 300px;
+height: 400px;
+margin: 20px 40px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+background: rgb(255, 255, 255, 0.05);
+box-shadow: 0 10px 25px rbga(0, 0, 0, 0.2);
+backdrop-filter: blur(15px);
+}
+.contenedor .tarjeta .imgBx{
+
+position: relative;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+padding: 20px;
+transition: 0.5s ease-in-out;
+
+
+}
+.contenedor .tarjeta:hover .imgBx{
+  transform: translateY(-100px);
+
+}
+
+.contenedor .tarjeta .imgBx img{
+max-width: 100%;
+margin: 0 0 20px;
+transition: 0.5s ease-in-out;
+
+}
+.contenedor .tarjeta:hover .imgBx img{
+  transform: translate(-20px,40px)rotate(-25deg)scale(1.4);
+}
+.contenedor .tarjeta .imgBx h2{
+  color: black;
+  font-weight: 600;
+}
+.contenedor .tarjeta .contenido{
+  position: absolute;
+  bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition:  0.5s ease-in-out;
+  opacity: 0;
+  visibility: hidden;
+
+
+}
+.contenedor .tarjeta:hover .contenido{
+
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(-50px);
+
+}
+.contenedor .tarjeta .contenido .talla{
+
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 8px 20px;
+
+
+}
+.contenedor .tarjeta .contenido .talla h3{
+ color: black;
+ font-weight: 300;
+ font-size: 14px;
+ text-transform: uppercase;
+ letter-spacing: 2px;
+ margin-right: 10px;
+
+
+}
+.contenedor .tarjeta .contenido .talla span{
+ width: 26px;
+ height: 26px;
+ text-align: center;
+ line-height: 24px;
+ display: inline-block;
+ color:black;
+ background-color: lemonchiffon;
+ border-radius: 4px;
+ font-size: 14px;
+ margin:0.5px;
+font-weight: 500;
+transition: 0.5s;
+cursor: pointer;
+
+}
+.contenedor .tarjeta .contenido .talla span:hover{
+background-color: lightblue;
+}
+.contenedor .tarjeta .contenido a{
+position: relative;
+top: 10px;
+display: inline-block;
+padding: 12px 30px;
+background-color: wheat;
+border-radius: 40px;
+font-weight: 600;
+letter-spacing: 1px;
+color: black;
+text-decoration: none;
+text-transform: uppercase;
+
+
+}
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+.card {
+display:inline-block;
+position: relative;
+width: 500px;
+height: 350px;
+margin: 50px;
+border-radius: 30px;
+
+align-items: center;
+border-radius: 20px;
+transition: 0.5s;
+
+}
+.card .circle{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+  overflow: hidden;
+}
+.card .circle::before{
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: #d83133;
+clip-path: circle(120px at center);
+transition:0.5s;
+
+}
+.card:hover .circle:before{
+  background-color:navajowhite;
+  clip-path: circle(400px at center);
+}
+.card img{
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%,-50%);
+height: 500px;
+pointer-events: none;
+transition: 0.5s;
+
+}
+.card:hover img
+{
+left:72%;
+height: 500px;
+
+}
+.card .content{
+
+  position: relative;
+  width: 50%;
+  left: 50%;
+  padding: 20px,20px,20px,40px;
+  transition: 0.5s;
+  opacity: 0;
+  visibility: hidden;
+}
+.card:hover .content{
+
+  left: 0;
+  opacity: 1;
+  visibility: visible;
+}
+.card .content h2{
+  color: red;
+  text-transform: uppercase;
+  font-size: 2em;
+  line-height: 1em;
+  margin-bottom: 5px;
+
+}
+.card .content p{
+color: #d83133;
+
+
+}
+.card .content a{
+position: relative;
+color: red;
+padding: 10px 20px;
+border-radius: 10px;
+border-radius: 10px;
+background:red;
+color:#333;
+margin-top: 10px;
+display: inline-block;
+text-decoration: none;
+font-weight: 700;
+
+
+}
+.formulario-registro {
+  width: 400px;
+  background: #24303c;
+  padding: 30px;
+  margin:  auto;
+  margin-top: 100px;
+  border-radius: 4px;
+  font-family: 'calibri';
+  color: white;
+  box-shadow: 7px 13px 37px #000;
+
+
+}
+.formulario-registro h4{
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+.controls {
+  width: 100%;
+  background: #24303c;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  border: 1px solid #1f53c5;
+  font-family: 'calibri';
+  font-size: 18px;
+  color:white;
+}
+.formulario-registro p{
+  height: 40px;
+  text-align: center;
+  font-size: 18px;
+  line-height: 40px;
+}
+.checkbox-container  .controll {
+      text-align: center;
+      font-size: 17px;
+  }
+.formulario-registro a{
+  color:white;
+  text-decoration: none;
+  height: 15px;
+  text-align: center;
+  font-size: 15px;
+  line-height: 15px;
+
+}
+.formulario-registro .control11:hover{
+  color:white;
+  text-decoration: underline;
+}
+.formulario-registro .botons{
+  width: 100%;
+  background: #1f53c5;
+  border: none;
+  padding: 12px;
+  color:white;
+  margin: 16px 0;
+  font-size: 16px;
+}
+
+.checkbox-container{
+  display: block;
+  position: relative;
+  padding-left: 35px ; 
+  margin-bottom: 12px ;
+  cursor: pointer;
+  font-size: 22px;
+  user-select: none;
+}
+.checkbox-container input{
+  position:absolute;
+  opacity: 0;
+  cursor:pointer;
+  height: 20px;
+  width: 20px;
+}
+.checkbox-container .checkmark{
+  position: absolute;
+  border-radius: 3px;
+  top:7px;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  transition: all 0.3s ease-in-out;
+}
+.checkbox-container .checkmark.radio{
+  position: absolute;
+  border-radius: 50%;
+  top:0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  transition: all 0.3s ease-in-out;
+}
+.checkbox-container  .material-icons{
+  
+  color:white;
+  transform: scale(0);
+  transition: all 0.3s ease-in-out;
+  margin-top: -500;
+}
+.checkbox-container .a.paloma{
+  top: 5px;
+}
+.checkbox-container input:checked ~ .checkmark{
+  background-color: #2196f3;
+}
+.checkbox-container input:checked ~ .checkmark .material-icons{
+  transform: scale(1);
+}
+.checkbox-container input:checked ~ .checkmark.radio .circle{
+  position:absolute;
+  border-radius: 50%;
+  top: 6px;
+  left: 7px;
+  height: 12px;
+  width: 12px;
+  background-color: white;
+  transition: all 0.3s ease-in-out;
+}
+.contenedorflex {
+  
+  border-radius: 10px;
+  
+}
+.contenedorflex {
+  padding: 10px;
+  margin: 50px;
+  border: solid 1px black;
+  border-radius: 10px;
+  background: #24303c;
+  
+}   
+
+
+
+
+@media (max-width:991px) {
+  .card{
+    width: auto; 
+    max-width: 350px;
+    align-items: flex-start;
+    margin: 10px;
+} 
+.card:hover
+{
+
+height: 600px;
+
+}
+.card .content{
+
+  width: 100%;
+  left: 0;
+  padding: 30px;
+}
+.card:hover img{
+
+  top: 70%;
+  Left: 50%;
+  height: 300px;
+}
+
+
+
+
+
+}
+@media (max-width:420px){
+
+
+  .card .content{
+      padding: 200px;
+  }
+  
+}
